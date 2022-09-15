@@ -5,9 +5,18 @@ class Car{
     this.width=width;
     this.height=height;
     
-    this.controls=new Controls();
-    
+    this.controls=new Controls();  
   }
+  
+  update(){
+    if(this.controls.forward){
+      this.y-=2;
+    }
+    if(this.controls.reverse){
+      this.+=2;
+    }
+  }
+  
   
   draw(ctx){
     ctx.beginPath();
